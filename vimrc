@@ -67,12 +67,12 @@ set nu
 " Python
 "------------Start Python PEP 8 stuff----------------
 " Number of spaces that a pre-existing tab is equal to.
-au BufRead,BufNewFile *py,*pyw,*.c,*.h set tabstop=4
+au BufRead,BufNewFile *py,*pyw,*.c,*.h,*.txt,*.go set tabstop=4
 
 "spaces for indents
-au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
-au BufRead,BufNewFile *.py,*.pyw set expandtab
-au BufRead,BufNewFile *.py set softtabstop=4
+au BufRead,BufNewFile *.py,*.pyw,*.yml,*.txt,*.go set shiftwidth=4
+au BufRead,BufNewFile *.py,*.pyw,*.yml,*.txt set expandtab
+au BufRead,BufNewFile *.py,*.yml,*.txt,*.go set softtabstop=4
 
 " Use the below highlight group when displaying bad whitespace is desired.
 highlight BadWhitespace ctermbg=red guibg=red
@@ -97,7 +97,7 @@ let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 " Optik
 if has('gui_running')
-  set guifont=Hack\ 12
+  set guifont=Noto\ Mono\ 14
   set background=dark
   colorscheme solarized
 else
@@ -111,6 +111,7 @@ au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2
     \ set softtabstop=2
     \ set shiftwidth=2
+    \ set expandtab
 
 " required for latex-suite
 set grepprg=grep\ -nH\ $*
