@@ -14,7 +14,8 @@ Plugin 'gmarik/Vundle.vim'
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
 
-" ...
+" Markdown
+Plugin 'JamshedVesuna/vim-markdown-preview'
 " Haptik
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
