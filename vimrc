@@ -19,6 +19,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 Bundle 'Valloric/YouCompleteMe'
+Plugin 'fatih/vim-go'
 
 " Syntax
 Plugin 'vim-syntastic/syntastic'
@@ -44,6 +45,7 @@ filetype plugin indent on    " required
 
 set encoding=utf-8
 
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 "custom keys
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g :YcmCompleter GoToDefinition<CR>
@@ -70,9 +72,9 @@ set nu
 au BufRead,BufNewFile *py,*pyw,*.c,*.h,*.txt,*.go set tabstop=4
 
 "spaces for indents
-au BufRead,BufNewFile *.py,*.pyw,*.yml,*.txt,*.go set shiftwidth=4
-au BufRead,BufNewFile *.py,*.pyw,*.yml,*.txt set expandtab
-au BufRead,BufNewFile *.py,*.yml,*.txt,*.go set softtabstop=4
+au BufRead,BufNewFile *.c,*.py,*.pyw,*.yml,*.txt,*.go set shiftwidth=4
+au BufRead,BufNewFile *.c,*.py,*.pyw,*.yml,*.txt set expandtab
+au BufRead,BufNewFile *.c,*.py,*.yml,*.txt,*.go set softtabstop=4
 
 " Use the below highlight group when displaying bad whitespace is desired.
 highlight BadWhitespace ctermbg=red guibg=red
@@ -107,7 +109,7 @@ endif
 call togglebg#map("<F5>")
 
 " Frontend
-au BufNewFile,BufRead *.js, *.html, *.css
+au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2
     \ set softtabstop=2
     \ set shiftwidth=2
